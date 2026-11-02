@@ -1,0 +1,1 @@
+sqlalchemy,fastapi,jwt,pydantic,psycopg2binary

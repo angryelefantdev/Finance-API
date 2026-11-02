@@ -1,0 +1,23 @@
+services:
+  web:
+    build: .
+    ports:
+      - "8000:8000"
+    environment:
+        DBPASSWORD: mypassword
+
+  database:
+    image: postgres:17
+    
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: mypassword
+      POSTGRES_DB: YOURDATABASE
+
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+    
+
+volumes:
+  postgres_data:     
